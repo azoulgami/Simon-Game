@@ -10,7 +10,7 @@ let index=0;
 //key press
 $(document).on("keydown", start);
 //touch
-$(document).on("touchstart", start);
+$(document).on("click", start);
 
 
 
