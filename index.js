@@ -12,6 +12,7 @@ $(document).on("keydown touchstart", function(e) {
         newColor();
         $("#level-title").text("Level " + level);
         started = true;
+        if(e.type === "touchstart") e.preventDefault();
     }
 });
 
