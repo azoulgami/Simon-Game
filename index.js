@@ -7,10 +7,13 @@ let started=false;
 let level=0;
 let index=0;
 
-//key press
-$(document).on("keydown", start);
-//touch
-$(document).on("click", start);
+$(document).on("keydown touchstart", function(e) {
+    if(!started) {
+        newColor();
+        $("#level-title").text("Level " + level);
+        started = true;
+    }
+});
 
 
 
@@ -30,13 +33,6 @@ $(".btn").on("click",function() {
 
 
 
-function start () {
-    if(!started) {
-        newColor();
-        $("#level-title").text("Level "+level);
-        started=true;
-    }
-}
 function newColor() {
     userPattern=[];
     level++;
